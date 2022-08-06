@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/contabilidad.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'contabilidad1' %}">
+                            <h5 class="card-title text-success">PLAN DE CUENTA</h5>
+                        </a>
+                        <p class="card-text">Edicion de Cuentas Contables</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/presupuesto.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'op2' %}">
+                            <h5 class="card-title text-success">LIBRO MAYOR</h5>
+                        </a>
+                        <p class="card-text">Consulta de cuentas en el libro mayor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/contador.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'op3' %}">
+                            <h5 class="card-title text-success">LIBRO DIARIO</h5>
+                        </a>
+                        <p class="card-text">Descripcion de asiento contable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

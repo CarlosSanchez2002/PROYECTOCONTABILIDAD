@@ -1,0 +1,114 @@
+{% extends 'consultacontabilidad.html' %}
+
+{% load static %}
+
+{% block columns %}
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body ">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">DETALLE</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail"
+                               value="PRUEBA">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">FECHA</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="inputPassword" readonly value="10-07-22">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">BENEFICIARIO</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPassword" readonly
+                               value="0926015850 - CARLOS JOEL SANCHEZ GALAN">
+
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">REFERENCIA</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail"
+                               value="Docs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <tr>
+        <th scope="col" style="width: 10%;">Nro Cuenta</th>
+        <th scope="col" style="width: 20%;">Descripcion</th>
+        <th scope="col" style="width: 10%;">Centro Costo</th>
+        <th scope="col" style="width: 10%;">Debe</th>
+        <th scope="col" style="width: 10%;">Haber</th>
+        <th scope="col" style="width: 15%;">Referencia</th>
+        <th scope="col" style="width: 10%;">Totales</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    <p>
+    <div class="container">
+        <tr>
+            <td>1</td>
+            <td>CAJA</td>
+            <td><input type="text" class="form-control"  readonly value="Verdadero"></td>
+            <td><input type="text" class="form-control" value="$40.00"></td>
+            <td><input type="text" class="form-control"  value="$00.00"></td>
+            <td><input type="text" class="form-control"  value="1"></td>
+            <td><input type="text" class="form-control"  value="$40.00"></td>
+
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DOCS X PAGAR</td>
+            <td><input type="text" class="form-control"  readonly value="Falso"></td>
+            <td><input type="text" class="form-control"  value="$00.00"></td>
+            <td><input type="text" class="form-control"  value="$30.00"></td>
+            <td><input type="text" class="form-control"  value="6"></td>
+            <td><input type="text" class="form-control"  value="$30.00"></td>
+
+        </tr>
+    </div>
+    </p>
+{% endblock %}
+{% block buttons_list %}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        GUARDAR
+    </button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    DATOS GUARDADOS "EXITOSAMENTE"!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+                    <a href="{{ listarC_url }}" class="btn btn-primary btn-flat">
+                        CONTINUAR
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    </button>
+    <a href="{{ listarC_url }}" class="btn btn-danger btn-flat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+             class="bi bi-x-octagon" viewBox="0 0 16 16">
+            <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        CANCELAR
+    </a>
+{% endblock %}
+
+

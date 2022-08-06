@@ -1,0 +1,156 @@
+{% extends 'consultacontabilidad.html' %}
+{% load static %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">No. CUENTA</th>
+        <th scope="col" style="width: 10%;">DESCRIPCION</th>
+        <th scope="col" style="width: 10%;">TIPO DE CUENTA</th>
+        <th scope="col" style="width: 10%;">MOVIMIENTO</th>
+        <th scope="col" style="width: 10%;">CENTROCOSTO</th>
+        <th scope="col" style="width: 15%;">DEUDORA</th>
+        <th scope="col" style="width: 10%;">PARTIDA DEBITO</th>
+        <th scope="col" style="width: 10%;">PARTIDA CREDITO</th>
+        <th scope="col" style="width: 10%;">OPCIONES</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    <tr>
+        <td>001</td>
+        <td>CAJA</td>
+        <td>ACTIVO</td>
+        <td>VERDADERO</td>
+        <td>FALSO</td>
+        <td>FALSO</td>
+        <td>SI</td>
+        <td>PENDIENTE</td>
+        <td class="acciones">
+            <a href="{{ crearC_url }}">✏️</a>
+            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">DATOS ELIMINADOS</h4>
+                            <a href="{{ listarC_url }}" style="margin-left:10%; margin-top:10%" type="submit"
+                               class="btn btn-primary col-12 mx-auto pull-left" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>DOCS. X PAGAR</td>
+        <td>PASIVO</td>
+        <td>FALSO</td>
+        <td>VERDADERO</td>
+        <td>VERDADERO</td>
+        <td>NO</td>
+        <td>SI</td>
+        <td class="acciones">
+            <a href="{{ crearC_url }}">✏️</a>
+            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">DATOS ELIMINADOS</h4>
+                            <a href="{{ listarC_url }}" style="margin-left:10%; margin-top:10%" type="submit"
+                               class="btn btn-primary col-12 mx-auto pull-left" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+
+
+
+            <td>003</td>
+        <td>CAPITAL</td>
+        <td>PATRIMONIO</td>
+        <td>VERDADERO</td>
+        <td>VERDADERO</td>
+        <td>FALSO</td>
+        <td>NO</td>
+        <td>SI</td>
+        <td class="acciones">
+            <a href="{{ crearC_url }}">✏️</a>
+            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">DATOS ELIMINADOS</h4>
+                            <a href="{{ listarC_url }}" style="margin-left:10%; margin-top:10%" type="submit"
+                               class="btn btn-primary col-12 mx-auto pull-left" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+
+
+            <td>004</td>
+        <td>VENTA</td>
+        <td>INGRESO</td>
+        <td>VERDADERO</td>
+        <td>FALSO</td>
+        <td>VERDADERO</td>
+        <td>SI</td>
+        <td>PENDIENTE</td>
+        <td class="acciones">
+            <a href="{{ crearC_url }}">✏️</a>
+            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">DATOS ELIMINADOS</h4>
+                            <a href="{{ listarC_url }}" style="margin-left:10%; margin-top:10%" type="submit"
+                               class="btn btn-primary col-12 mx-auto pull-left" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+
+
+            <td>005</td>
+        <td>COMPRA</td>
+        <td>GASTO</td>
+        <td>FALSO</td>
+        <td>FALSO</td>
+        <td>FALSO</td>
+        <td>NO</td>
+        <td>SI</td>
+        <td class="acciones">
+            <a href="{{ crearC_url }}">✏️</a>
+            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">DATOS ELIMINADOS</h4>
+                            <a href="{{ listarC_url }}" style="margin-left:10%; margin-top:10%" type="submit"
+                               class="btn btn-primary col-12 mx-auto pull-left" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+{% endblock %}

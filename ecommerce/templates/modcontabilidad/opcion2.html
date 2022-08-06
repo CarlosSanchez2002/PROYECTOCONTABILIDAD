@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <div class="container">
+        <strong>
+            ENERO 2022
+        </strong>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Cuenta</th>
+            <th>Tipo</th>
+            <th>Saldo Inicial</th>
+            <th>Debe</th>
+            <th>Haber</th>
+            <th>SaldoFinal</th>
+
+        </tr>
+        </thead>
+        <tbody style="height: 10px !important; overflow: scroll; ">
+        <tr>
+            <td class="filterable-cell">001-Caja</td>
+            <td class="filterable-cell">Activo</td>
+            <td class="filterable-cell">20.000</td>
+            <td class="filterable-cell">20.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">20.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">002-Banco</td>
+            <td class="filterable-cell">Activo</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">30.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">003-Documento Por Pagar</td>
+            <td class="filterable-cell">Pasivo</td>
+            <td class="filterable-cell">15.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">15.000</td>
+            <td class="filterable-cell">15.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">004-Intereses a pagar</td>
+            <td class="filterable-cell">Pasivo</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">10.000</td>
+        </tr>
+        <tr>
+
+            <td class="filterable-cell">005-Capital</td>
+            <td class="filterable-cell">Patrimonio</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">5.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">006-Venta</td>
+            <td class="filterable-cell">Ingreso</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">15.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">007-Prestación de servicios</td>
+            <td class="filterable-cell">Ingreso</td>
+            <td class="filterable-cell">8.000</td>
+            <td class="filterable-cell">8.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">23.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">008- Comisiones recibidas</td>
+            <td class="filterable-cell">Ingreso</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">10.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">33.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">009- Compras</td>
+            <td class="filterable-cell">Gastos</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">5.000</td>
+            <td class="filterable-cell">28.000</td>
+
+        </tr>
+        <tr>
+            <td class="filterable-cell">010- Gastos de personal</td>
+            <td class="filterable-cell">Gastos</td>
+            <td class="filterable-cell">8.000</td>
+            <td class="filterable-cell">0</td>
+            <td class="filterable-cell">8.000</td>
+            <td class="filterable-cell">20.000</td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+
+{% endblock %}
